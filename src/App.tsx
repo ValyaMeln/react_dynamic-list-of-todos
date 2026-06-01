@@ -18,7 +18,7 @@ export const App: React.FC = () => {
   const [selectedTodo, setSelectedTodo] = useState(null);
 
   const [user, setUser] = useState(null);
-  const [userLoading, setUserLoading] = useState(false);
+  const [userLoading, setUserLoading] = useState(true);
 
   const [status, setStatus] = useState('all');
   const [query, setQuery] = useState('');
@@ -36,6 +36,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     loadTodos();
   }, []);
+
   const handleSelectTodo = async (todo: Todo) => {
     setSelectedTodo(todo);
 
